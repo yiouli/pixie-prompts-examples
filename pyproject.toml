@@ -12,14 +12,14 @@ readme = "README.md"
 
 [tool.poetry.urls]
 Homepage = "https://gopixie.ai"
-Repository = "https://github.com/yiouli/pixie-prompts"
+Repository = "https://github.com/yiouli/pixie-prompts-examples"
 Documentation = "https://yiouli.github.io/pixie-prompts/"
 Issues = "https://github.com/yiouli/pixie-prompts/issues"
 Changelog = "https://github.com/yiouli/pixie-prompts/commits/main/"
 
 [tool.poetry.dependencies]
 python = ">=3.11,<3.14"
-pixie-prompts = {path = "../pixie-prompts", develop = true, extras = ["server"]}
+pixie-prompts = {version = "^0.1.1", extras = ["server"]}
 
 [build-system]
 requires = ["poetry-core>=1.0.0", "setuptools-scm>=8.0"]
