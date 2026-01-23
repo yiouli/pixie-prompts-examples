@@ -1,0 +1,45 @@
+{
+  "defaultVersionId": "v1",
+  "variablesSchema": {
+    "$defs": {
+      "Person": {
+        "properties": {
+          "name": {
+            "title": "Name",
+            "type": "string"
+          },
+          "age": {
+            "title": "Age",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "name",
+          "age"
+        ],
+        "title": "Person",
+        "type": "object"
+      }
+    },
+    "properties": {
+      "email": {
+        "title": "Email",
+        "type": "string"
+      },
+      "phone": {
+        "title": "Phone",
+        "type": "string"
+      },
+      "person": {
+        "$ref": "#/$defs/Person"
+      }
+    },
+    "required": [
+      "email",
+      "phone",
+      "person"
+    ],
+    "title": "Contact",
+    "type": "object"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "defaultVersionId": "v1",
+  "variablesSchema": {
+    "properties": {
+      "name": {
+        "title": "Name",
+        "type": "string"
+      },
+      "age": {
+        "title": "Age",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "name",
+      "age"
+    ],
+    "title": "Person",
+    "type": "object"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "defaultVersionId": "v2",
+  "variablesSchema": {
+    "properties": {
+      "full_name": {
+        "title": "Full Name",
+        "type": "string"
+      },
+      "last_employer": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Last Employer"
+      },
+      "skills": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Skills",
+        "type": "array"
+      }
+    },
+    "required": [
+      "full_name",
+      "last_employer",
+      "skills"
+    ],
+    "title": "Resume",
+    "type": "object"
+  }
+}
