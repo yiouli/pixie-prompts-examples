@@ -4,7 +4,7 @@ packages = [
     { include = "examples" }
 ]
 
-version = "0.1.2"
+version = "0.1.4"
 description = "examples for using pixie-prompts"
 authors = ["Yiou Li <yol@gopixie.ai>"]
 license = "MIT"
@@ -19,7 +19,7 @@ Changelog = "https://github.com/yiouli/pixie-prompts/commits/main/"
 
 [tool.poetry.dependencies]
 python = ">=3.11,<3.14"
-pixie-prompts = {path = "../pixie-prompts", develop = true, extras = ["server"]}
+pixie-prompts = {version = "^0.1.4", develop = true, extras = ["server"]}
 openai = "^2.15.0"
 
 [build-system]
