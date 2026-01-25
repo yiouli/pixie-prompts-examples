@@ -698,32 +698,30 @@ files = [
 
 [[package]]
 name = "pixie-prompts"
-version = "0.1.2"
+version = "0.1.4"
 description = "Code-first, type-safe prompt management"
 optional = false
-python-versions = ">=3.10,<4.0"
+python-versions = "<4.0,>=3.10"
 groups = ["main"]
-files = []
-develop = true
+files = [
+    {file = "pixie_prompts-0.1.4-py3-none-any.whl", hash = "sha256:92fbee15b0168bd0c7ef33a9e72f3f6b98d101a53857a10b4f7a0c087ac9420d"},
+    {file = "pixie_prompts-0.1.4.tar.gz", hash = "sha256:a08a4bb7d55ab6e7c473e62f95c3f62fd192d1a8347da21db0f404e2e79abdda"},
+]
 
 [package.dependencies]
-colorlog = {version = ">=6.10.1", optional = true}
-dotenv = {version = ">=0.9.9", optional = true}
-fastapi = {version = ">=0.128.0", optional = true}
-jinja2 = "^3.1.6"
-jsonsubschema = "^0.0.7"
-pydantic = "^2.12.5"
-pydantic-ai-slim = {version = ">=1.39.0", optional = true}
-strawberry-graphql = {version = ">=0.288.1", optional = true}
-uvicorn = {version = ">=0.40.0", optional = true}
-watchdog = {version = ">=6.0.0", optional = true}
+colorlog = {version = ">=6.10.1", optional = true, markers = "extra == \"server\""}
+dotenv = {version = ">=0.9.9", optional = true, markers = "extra == \"server\""}
+fastapi = {version = ">=0.128.0", optional = true, markers = "extra == \"server\""}
+jinja2 = ">=3.1.6,<4.0.0"
+jsonsubschema = ">=0.0.7,<0.0.8"
+pydantic = ">=2.12.5,<3.0.0"
+pydantic-ai-slim = {version = ">=1.39.0", optional = true, markers = "extra == \"server\""}
+strawberry-graphql = {version = ">=0.288.1", optional = true, markers = "extra == \"server\""}
+uvicorn = {version = ">=0.40.0", optional = true, markers = "extra == \"server\""}
+watchdog = {version = ">=6.0.0", optional = true, markers = "extra == \"server\""}
 
 [package.extras]
 server = ["colorlog (>=6.10.1)", "dotenv (>=0.9.9)", "fastapi (>=0.128.0)", "pydantic-ai-slim (>=1.39.0)", "strawberry-graphql (>=0.288.1)", "uvicorn (>=0.40.0)", "watchdog (>=6.0.0)"]
-
-[package.source]
-type = "directory"
-url = "../pixie-prompts"
 
 [[package]]
 name = "portion"
@@ -1200,14 +1198,14 @@ full = ["httpx (>=0.27.0,<0.29.0)", "itsdangerous", "jinja2", "python-multipart 
 
 [[package]]
 name = "strawberry-graphql"
-version = "0.289.3"
+version = "0.289.4"
 description = "A library for creating GraphQL APIs"
 optional = false
 python-versions = "<4.0,>=3.10"
 groups = ["main"]
 files = [
-    {file = "strawberry_graphql-0.289.3-py3-none-any.whl", hash = "sha256:2b8a3cd96b1e5127faa3138ab80825dddcb420a2e7352b851b50a78795a224bf"},
-    {file = "strawberry_graphql-0.289.3.tar.gz", hash = "sha256:8ee5b306b57fefe5dffcfb546a19491213152f7402e3615ddabdd096fb0381da"},
+    {file = "strawberry_graphql-0.289.4-py3-none-any.whl", hash = "sha256:4cc1aa940e5a41305bd691079f0938baa5942b24645b8b3607d95255059804cd"},
+    {file = "strawberry_graphql-0.289.4.tar.gz", hash = "sha256:b2b15f282778f484496bc194d5a5a865f494d65392cb955dfe5dac043d275c56"},
 ]
 
 [package.dependencies]
@@ -1369,4 +1367,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.11,<3.14"
-content-hash = "a56ad6539a587765a1ca07480faf5d4c28c065578610dd02d692420dd521729c"
+content-hash = "bdcacb5d237c112fc3130895483f86607fabedd696c81e4c0f0b8d0cf662439a"
