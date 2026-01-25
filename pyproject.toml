@@ -19,7 +19,8 @@ Changelog = "https://github.com/yiouli/pixie-prompts/commits/main/"
 
 [tool.poetry.dependencies]
 python = ">=3.11,<3.14"
-pixie-prompts = {version = ">=0.1.2", extras = ["server"]}
+pixie-prompts = {path = "../pixie-prompts", develop = true, extras = ["server"]}
+openai = "^2.15.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0", "setuptools-scm>=8.0"]
