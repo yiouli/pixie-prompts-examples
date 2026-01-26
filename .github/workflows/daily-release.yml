@@ -78,7 +78,7 @@ jobs:
           virtualenvs-create: true
           virtualenvs-in-project: true
 
-      - name: Check latest pixie-sdk version
+      - name: Check latest pixie-prompts version
         if: steps.release_guard.outputs.should_release == 'true'
         id: pixie-version
         run: |
